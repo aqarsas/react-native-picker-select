@@ -1,6 +1,15 @@
 import React, { PureComponent } from 'react';
-import { Keyboard, Modal, Platform, Text, TextInput, View } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler'
+import {
+    Keyboard,
+    Modal,
+    Platform,
+    Text,
+    TextInput,
+    View,
+    Pressable,
+    TouchableOpacity,
+} from 'react-native';
+//import { TouchableOpacity } from 'react-native-gesture-handler'
 import PropTypes from 'prop-types';
 import isEqual from 'lodash.isequal';
 import { Picker } from '@react-native-picker/picker';
@@ -479,9 +488,9 @@ export default class RNPickerSelect extends PureComponent {
         } = this.props;
         const { selectedItem } = this.state;
 
-        const Component = fixAndroidTouchableBug ? View : TouchableOpacity;
+        //const Component = fixAndroidTouchableBug ? View : TouchableOpacity;
         return (
-            <Component
+            <Pressable
                 testID="android_touchable_wrapper"
                 onPressIn={onOpen}
                 activeOpacity={1}
@@ -504,7 +513,7 @@ export default class RNPickerSelect extends PureComponent {
                         {this.renderPickerItems()}
                     </Picker>
                 </View>
-            </Component>
+            </Pressable>
         );
     }
 
