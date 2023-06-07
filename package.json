@@ -43,7 +43,8 @@
         "react-dom": ">=16.6.1",
         "react-native": "0.71.8",
         "@react-native-picker/picker": ">=2.4.9",
-        "react-test-renderer": "^16.6.1"
+        "react-test-renderer": "^16.6.1",
+        "react-native-gesture-handler": "^2.10.2"
     },
     "peerDependencies": {
         "@react-native-picker/picker": ">=2.4.9"
