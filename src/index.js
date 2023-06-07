@@ -482,7 +482,7 @@ export default class RNPickerSelect extends PureComponent {
         return (
             <Component
                 testID="android_touchable_wrapper"
-                onPress={onOpen}
+                onPressIn={onOpen}
                 activeOpacity={1}
                 {...touchableWrapperProps}
             >
